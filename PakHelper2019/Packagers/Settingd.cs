@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Packagers
 {
@@ -34,4 +35,5 @@ namespace Packagers
         /// </summary>
         public static SolidBrush DefaultTabBorderColor = new SolidBrush(System.Drawing.Color.FromArgb(0,0,0));
      }
+
 }

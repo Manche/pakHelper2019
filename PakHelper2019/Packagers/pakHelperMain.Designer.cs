@@ -1,6 +1,6 @@
 ﻿namespace Packagers
 {
-    partial class Form1
+    partial class pakHelperMain
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label4 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,6 +105,17 @@
             this.tabPage1.Size = new System.Drawing.Size(708, 517);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pak";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Wheat;
+            this.button4.Font = new System.Drawing.Font("游ゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button4.Location = new System.Drawing.Point(492, 423);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(121, 28);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Make pak";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -320,35 +332,35 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(630, 38);
+            this.label4.Location = new System.Drawing.Point(579, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 12);
             this.label4.TabIndex = 1;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // button4
+            // button5
             // 
-            this.button4.BackColor = System.Drawing.Color.Wheat;
-            this.button4.Font = new System.Drawing.Font("游ゴシック", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.Location = new System.Drawing.Point(492, 423);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 28);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Make pak";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button5.Location = new System.Drawing.Point(664, 33);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Settigs";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
             // 
-            // Form1
+            // pakHelperMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(762, 640);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "pakHelperMain";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Text = "pakHelper 2019";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -391,6 +403,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
