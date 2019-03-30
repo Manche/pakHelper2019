@@ -13,9 +13,7 @@
 - makeobjのフロントエンド  
 - 確かに小さな一歩だが、実際はもっと大きい一歩。  
 
-## 過去
-
-### pakHelperはオリジナルではありません。  
+## pakHelperはオリジナルではありません。  
 
 pakHelper2019はpakHelperをより最近のものに仕立て上げたものになります。  
 元々、pakHelperは南福岡車両氏が3年以上も前に制作されていたツールとなっています。  
@@ -40,9 +38,7 @@ You've heard similar sound in the old days? yup, he might be came back, doesn't 
 - It's only use for Frontend to makeobj.  
 - Only small step, but very large step.  
 
-## History  
-
-### pakHelper is not Unique  
+## pakHelper is not Unique  
 
 pakHelper2019 is remake and modernize version of _pakHelper_ in Simutrans.
 pakHelper was developed by _'MinamiFukuokaSyaryo / 南福岡車両 '_ in about over 3 years ago.  
