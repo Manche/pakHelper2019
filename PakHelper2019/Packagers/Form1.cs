@@ -17,10 +17,14 @@ namespace Packagers
     public partial class Form1 : MetroForm
     {
 
-        public Form1()
+        private string inputDatPath = "";
+        private string inputDatFile = "";
+
+        public Form1(string verInfo = "")
         {
             InitializeComponent();
             Opacity = 0;
+            this.label4.Text = "version:" + verInfo;
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -67,8 +71,25 @@ namespace Packagers
         {
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                this.textBox2.Text = openFileDialog1.FileName;
+                this.textBox2.Text = openFileDialog1.SafeFileName;
+                this.inputDatPath = Path.GetDirectoryName(openFileDialog1.FileName);
+                this.textBox3.Text = inputDatPath;
+                this.folderBrowserDialog1.SelectedPath = inputDatPath;
+                this.inputDatFile = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+            }   
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.textBox3.Text = folderBrowserDialog1.SelectedPath;
             }
+        }
+
+        private void button3_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.textBox4.Text = this.inputDatFile + ".pak";
         }
     }
 }
