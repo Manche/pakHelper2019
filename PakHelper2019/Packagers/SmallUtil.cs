@@ -43,9 +43,35 @@ namespace pakHelper2019
             }
         }
 
+        public static void GetSettings(String confs,ref CheckBox ck)
+        {
+            try
+            {
+                if (TryBool(Properties.Settings.Default[confs]))
+                {
+                    ck.Checked = true;
+                }
+                else
+                {
+                    ck.Checked = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return;
+            }
+        }
+
         public static void SaveSettings(String confs, TextBox obj)
         {
             Properties.Settings.Default[confs] = obj.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        public static void SaveSettings(String confs, CheckBox obj)
+        {
+            Properties.Settings.Default[confs] = obj.Checked;
             Properties.Settings.Default.Save();
         }
 

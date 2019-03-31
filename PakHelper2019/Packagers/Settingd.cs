@@ -40,6 +40,11 @@ namespace pakHelper2019
         public static String _UseExtractSamepath = "UseExtractSamepath";
         public static String _UseMergeSamepath = "UseMergeSamepath";
 
+        public static String _UseMakeobjRelative = "UseMakeobjRelative";
+        public static String _UsePakRelative = "UsePakRelative";
+        public static String _UseExtractRelative = "UseExtractRelative";
+        public static String _UseMergeRelative = "UseMergeRelative";
+
         public static String _Makeobjpath = "Makeobjpath";
         public static String _Pakpath = "Pakpath";
         public static String _Extractpath = "Extractpath";

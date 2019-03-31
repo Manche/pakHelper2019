@@ -127,5 +127,53 @@ namespace pakHelper2019.Properties {
                 this["Mergepath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseMakeobjRelative {
+            get {
+                return ((bool)(this["UseMakeobjRelative"]));
+            }
+            set {
+                this["UseMakeobjRelative"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UsePakRelative {
+            get {
+                return ((bool)(this["UsePakRelative"]));
+            }
+            set {
+                this["UsePakRelative"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseExtractRelative {
+            get {
+                return ((bool)(this["UseExtractRelative"]));
+            }
+            set {
+                this["UseExtractRelative"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseMergeRelative {
+            get {
+                return ((bool)(this["UseMergeRelative"]));
+            }
+            set {
+                this["UseMergeRelative"] = value;
+            }
+        }
     }
 }

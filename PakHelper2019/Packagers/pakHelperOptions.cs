@@ -41,6 +41,10 @@ namespace pakHelper2019
             SmallUtil.GetSettings(Settingd._UsePakSamepath, this.radioButton3, this.radioButton4);
             SmallUtil.GetSettings(Settingd._UseExtractSamepath, this.radioButton5, this.radioButton6);
             SmallUtil.GetSettings(Settingd._UseMergeSamepath, this.radioButton7, this.radioButton8);
+            SmallUtil.GetSettings(Settingd._UseMakeobjRelative, ref this.checkBox1);
+            SmallUtil.GetSettings(Settingd._UsePakRelative, ref this.checkBox2);
+            SmallUtil.GetSettings(Settingd._UseExtractRelative, ref this.checkBox3);
+            SmallUtil.GetSettings(Settingd._UseMergeRelative, ref this.checkBox4);
         }
 
 
@@ -85,6 +89,10 @@ namespace pakHelper2019
             SmallUtil.SaveSettings(Settingd._UsePakSamepath, this.radioButton3, this.radioButton4);
             SmallUtil.SaveSettings(Settingd._UseExtractSamepath, this.radioButton5, this.radioButton6);
             SmallUtil.SaveSettings(Settingd._UseMergeSamepath, this.radioButton7, this.radioButton8);
+            SmallUtil.SaveSettings(Settingd._UseMakeobjRelative,  this.checkBox1);
+            SmallUtil.SaveSettings(Settingd._UsePakRelative,  this.checkBox2);
+            SmallUtil.SaveSettings(Settingd._UseExtractRelative,  this.checkBox3);
+            SmallUtil.SaveSettings(Settingd._UseMergeRelative,  this.checkBox4);
             this.canBeClose = true;
             this.pakHelperOptions_FormBeforeClosing();
         }
@@ -128,6 +136,14 @@ namespace pakHelper2019
             {
                 this.textBox4.Text = browse.SelectedPath;
             }
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void button7_MouseClick(object sender, MouseEventArgs e)
+        {
         }
     }
 }
