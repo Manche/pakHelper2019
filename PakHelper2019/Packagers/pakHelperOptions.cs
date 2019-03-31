@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
+using System.IO;
+
 namespace pakHelper2019
 {
     public partial class pakHelperOptions : MetroForm   
@@ -33,6 +35,30 @@ namespace pakHelper2019
             Opacity = 0;
             ControlBox = false;
 
+            this.LoadDefaultSettings();
+        }
+
+        private void LoadSettings(bool Desinare = false, string Path = "")
+        {
+            try
+            {
+                if (Desinare)
+                {
+                }
+                else
+                {
+                    this.LoadDefaultSettings();
+                }
+            }
+            catch(Exception ex)
+            {
+                this.LoadDefaultSettings();
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void LoadDefaultSettings()
+        {
             SmallUtil.GetSettings(ref this.textBox1, Settingd._Makeobjpath, Settingd._UseMakeobjSamepath);
             SmallUtil.GetSettings(ref this.textBox2, Settingd._Pakpath, Settingd._UsePakSamepath);
             SmallUtil.GetSettings(ref this.textBox3, Settingd._Extractpath, Settingd._UseExtractSamepath);
@@ -41,10 +67,28 @@ namespace pakHelper2019
             SmallUtil.GetSettings(Settingd._UsePakSamepath, this.radioButton3, this.radioButton4);
             SmallUtil.GetSettings(Settingd._UseExtractSamepath, this.radioButton5, this.radioButton6);
             SmallUtil.GetSettings(Settingd._UseMergeSamepath, this.radioButton7, this.radioButton8);
-            SmallUtil.GetSettings(Settingd._UseMakeobjRelative, ref this.checkBox1);
-            SmallUtil.GetSettings(Settingd._UsePakRelative, ref this.checkBox2);
-            SmallUtil.GetSettings(Settingd._UseExtractRelative, ref this.checkBox3);
-            SmallUtil.GetSettings(Settingd._UseMergeRelative, ref this.checkBox4);
+        }
+
+        private void SaveSettings(String FilePath)
+        {
+            String JsonStrings = "";
+            if (SmallUtil.CreateJsonString(ref JsonStrings,
+                                        Settingd._Makeobjpath, 
+                                        Settingd._Pakpath, 
+                                        Settingd._Extractpath, 
+                                        Settingd._Mergepath,
+                                        Settingd._UseMakeobjSamepath,
+                                        Settingd._UsePakSamepath,
+                                        Settingd._UseExtractSamepath,
+                                        Settingd._UseMergeSamepath))
+            {
+                if(FSUtil.WriteFiles(FilePath, JsonStrings))
+                {
+                }
+                else
+                {
+                }
+            }
         }
 
 
@@ -89,10 +133,6 @@ namespace pakHelper2019
             SmallUtil.SaveSettings(Settingd._UsePakSamepath, this.radioButton3, this.radioButton4);
             SmallUtil.SaveSettings(Settingd._UseExtractSamepath, this.radioButton5, this.radioButton6);
             SmallUtil.SaveSettings(Settingd._UseMergeSamepath, this.radioButton7, this.radioButton8);
-            SmallUtil.SaveSettings(Settingd._UseMakeobjRelative,  this.checkBox1);
-            SmallUtil.SaveSettings(Settingd._UsePakRelative,  this.checkBox2);
-            SmallUtil.SaveSettings(Settingd._UseExtractRelative,  this.checkBox3);
-            SmallUtil.SaveSettings(Settingd._UseMergeRelative,  this.checkBox4);
             this.canBeClose = true;
             this.pakHelperOptions_FormBeforeClosing();
         }
@@ -140,10 +180,18 @@ namespace pakHelper2019
 
         private void button6_MouseClick(object sender, MouseEventArgs e)
         {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.SaveSettings(saveFileDialog1.FileName);
+            }
         }
 
         private void button7_MouseClick(object sender, MouseEventArgs e)
         {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.LoadSettings(true, openFileDialog1.FileName);
+            }
         }
     }
 }

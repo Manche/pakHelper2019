@@ -66,6 +66,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -82,7 +85,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animator.cs" />
+    <Compile Include="JsonProxy.cs" />
+    <Compile Include="QiLib\Animator.cs" />
     <Compile Include="pakHelperMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,9 +101,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QiLib\FolderSelectDialog.cs" />
     <Compile Include="Settingd.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SmallUtil.cs" />
+    <EmbeddedResource Include="pakHelperMain.ja.resx">
+      <DependentUpon>pakHelperMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pakHelperMain.resx">
+      <DependentUpon>pakHelperMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pakHelperOptions.ja.resx">
+      <DependentUpon>pakHelperOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pakHelperOptions.resx">
       <DependentUpon>pakHelperOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +127,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

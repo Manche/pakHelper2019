@@ -11,9 +11,11 @@ namespace pakHelper2019
     /// <summary>
     /// 設定
     /// </summary>
-    class Settingd
+    public static class Settingd
     {
         /*全般*/
+
+        public static String _AppRootPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
 
         /// <summary>
         /// タブ色
@@ -49,6 +51,14 @@ namespace pakHelper2019
         public static String _Pakpath = "Pakpath";
         public static String _Extractpath = "Extractpath";
         public static String _Mergepath = "Mergepath";
+    }
+
+    /// <summary>
+    /// Jsonヘッダ
+    /// </summary>
+    public static class JsonHeaderDefinition
+    {
+        public static String _OutputSettings = "OutputSettings";
     }
 
 }
