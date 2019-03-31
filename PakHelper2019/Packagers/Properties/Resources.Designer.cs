@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Packagers.Properties {
+namespace pakHelper2019.Properties {
     using System;
     
     

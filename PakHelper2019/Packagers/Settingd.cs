@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Packagers
+namespace pakHelper2019
 {
     /// <summary>
     /// 設定
@@ -34,6 +34,16 @@ namespace Packagers
         /// タブボーダー色
         /// </summary>
         public static SolidBrush DefaultTabBorderColor = new SolidBrush(System.Drawing.Color.FromArgb(0,0,0));
-     }
+
+        public static String _UseMakeobjSamepath = "UseMakeobjSamepath";
+        public static String _UsePakSamepath = "UsePakSamepath";
+        public static String _UseExtractSamepath = "UseExtractSamepath";
+        public static String _UseMergeSamepath = "UseMergeSamepath";
+
+        public static String _Makeobjpath = "Makeobjpath";
+        public static String _Pakpath = "Pakpath";
+        public static String _Extractpath = "Extractpath";
+        public static String _Mergepath = "Mergepath";
+    }
 
 }

@@ -12,7 +12,7 @@ using System.Windows.Forms.VisualStyles;
 
 using System.IO;
 
-namespace Packagers
+namespace pakHelper2019
 {
     public partial class pakHelperMain : MetroForm
     {
@@ -31,7 +31,10 @@ namespace Packagers
         private void ShowSettingWindow()
         {
             pakHelperOptions subWindow = new pakHelperOptions();
+            subWindow.Owner = this;
             subWindow.Size = this.Size;
+            subWindow.SetDesktopLocation(this.DesktopLocation.X, this.DesktopLocation.Y);
+            subWindow.StartPosition = FormStartPosition.CenterParent;
             subWindow.ShowDialog();
         }
         #endregion
