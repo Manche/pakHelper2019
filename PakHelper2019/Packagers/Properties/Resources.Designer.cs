@@ -39,7 +39,7 @@ namespace pakHelper2019.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Packagers.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pakHelper2019.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace pakHelper2019.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Use default makeobj path (path of this application). に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string makeobjpath_default {
+            get {
+                return ResourceManager.GetString("makeobjpath_default", resourceCulture);
             }
         }
     }

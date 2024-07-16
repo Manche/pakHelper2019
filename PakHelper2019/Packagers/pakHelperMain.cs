@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -19,6 +20,7 @@ namespace pakHelper2019
 
         private string inputDatPath = "";
         private string inputDatFile = "";
+
 
         public pakHelperMain(string verInfo = "")
         {
@@ -111,6 +113,46 @@ namespace pakHelper2019
         private void button5_MouseClick(object sender, MouseEventArgs e)
         {
             ShowSettingWindow();
+        }
+
+        /// <summary>
+        /// pakボタン
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("relativemakeobjpath:" + SmallUtil.TryBool(Properties.Settings.Default[Settingd._UseMakeobjRelative]));
+            Console.WriteLine("makeobjpath:" + Properties.Settings.Default[Settingd._Makeobjpath]);
+            if (SmallUtil.TryBool(Properties.Settings.Default[Settingd._UseMakeobjRelative]) == true && (String)Properties.Settings.Default[Settingd._Makeobjpath] == "")
+            {
+                MessageBox.Show( Properties.Resources.makeobjpath_default, "Configuration Error",MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
+                SmallUtil.SaveSettings(Settingd._Makeobjpath, Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+            }
+            if (Settingd._Pakpath == "")
+            {
+                MessageBox.Show("Use default makeobj path (path of this application).", "Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            if (Settingd._Extractpath == "")
+            {
+                MessageBox.Show("Use default makeobj path (path of this application).", "Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            if (Settingd._Mergepath == "")
+            {
+                MessageBox.Show("Use default makeobj path (path of this application).", "Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            if (Settingd._UseMakeobjSamepath == "")
+            {
+            }
+            if (Settingd._UsePakSamepath == "")
+            {
+            }
+            if (Settingd._UseExtractSamepath == "")
+            {
+            }
+            if (Settingd._UseMergeSamepath == "")
+            {
+            }
         }
     }
 }

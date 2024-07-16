@@ -19,5 +19,9 @@ namespace pakHelper2019
         {
             get;set;
         }
+        public String Types
+        {
+            get;set;
+        }
     }
 }

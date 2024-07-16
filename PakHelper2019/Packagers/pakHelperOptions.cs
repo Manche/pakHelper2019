@@ -44,6 +44,64 @@ namespace pakHelper2019
             {
                 if (Desinare)
                 {
+                    if (Path == "")
+                    {
+                        // 対象がない
+                        return;
+                    }
+                    if (!File.Exists(Path))
+                    {
+                        return;
+                    }
+                    try
+                    {
+                        String strF = FSUtil.ReadFiles(Path);
+                        List<JsonProxy> objProxy = new List<JsonProxy>();
+                        objProxy = SmallUtil.LoadJsonString(strF);
+                        Console.WriteLine(strF);
+                        Console.WriteLine(objProxy.Count());
+                        foreach(JsonProxy objTmpProxy in objProxy)
+                        {
+                            if (objTmpProxy.IsDefinition)
+                            {
+                                continue;
+                            }
+
+                            Console.WriteLine(objTmpProxy.name);
+
+                            switch (objTmpProxy.Types.ToString())
+                            {
+                                case "System.String":
+                                    SmallUtil.SaveSettings(objTmpProxy.name, objTmpProxy.Val);
+                                    break;
+                                case "System.Integer":
+                                    SmallUtil.SaveSettings(objTmpProxy.name, ObjTrys.TryInt(objTmpProxy.Val));
+                                    break;
+                                case "System.Boolean":
+                                    SmallUtil.SaveSettings(objTmpProxy.name, ObjTrys.TryBool(objTmpProxy.Val));
+                                    break;
+                                default:
+                                    //SmallUtil.SaveSettings(objTmpProxy.name, objTmpProxy.Val);
+                                    break;
+                            }
+
+                        }
+                        /*`
+                        SmallUtil.SaveSettings(objProxy(Settingd._Makeobjpath), this.textBox1);
+                        SmallUtil.SaveSettings(objProxy(Settingd._Pakpath), this.textBox2);
+                        SmallUtil.SaveSettings(objProxy(Settingd._Extractpath), this.textBox3);
+                        SmallUtil.SaveSettings(objProxy(Settingd._Mergepath), this.textBox4);
+                        SmallUtil.SaveSettings(objProxy(Settingd._UseMakeobjSamepath), this.radioButton1, this.radioButton2);
+                        SmallUtil.SaveSettings(objProxy(Settingd._UsePakSamepath), this.radioButton3, this.radioButton4);
+                        SmallUtil.SaveSettings(objProxy(Settingd._UseExtractSamepath), this.radioButton5, this.radioButton6);
+                        SmallUtil.SaveSettings(objProxy(Settingd._UseMergeSamepath), this.radioButton7, this.radioButton8);
+                        */
+                        this.LoadDefaultSettings();
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
                 }
                 else
                 {
@@ -99,6 +157,7 @@ namespace pakHelper2019
             {
                 if (!Visible || IsDisposed) return false;
                 Opacity = (double)frame / frequency;
+                Console.WriteLine(Opacity);
                 return true;
             });
         }
@@ -116,6 +175,16 @@ namespace pakHelper2019
         /// </summary>
         private void pakHelperOptions_FormBeforeClosing()
         {
+            Console.WriteLine("閉じる");
+            Animator.Animate(150, (frame, frequency) =>
+            {
+                Console.WriteLine(frame + "|" + frequency);
+                //if (!Visible || IsDisposed) return false;
+                Opacity = 1 - (double)frame / frequency;
+                Console.WriteLine(Opacity);
+                return true;
+            });
+
             this.Close();
         }
 
@@ -186,12 +255,24 @@ namespace pakHelper2019
             }
         }
 
-        private void button7_MouseClick(object sender, MouseEventArgs e)
+        private void bunSettingLoad_MouseClick(object sender, MouseEventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 this.LoadSettings(true, openFileDialog1.FileName);
             }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(sender.ToString());
+            RadioButton rd = (RadioButton)sender;
+            Console.WriteLine(rd.Name);
+        }
+
+        private void pakHelperOptions_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

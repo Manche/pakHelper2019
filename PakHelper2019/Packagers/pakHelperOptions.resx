@@ -683,52 +683,52 @@
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSettingsSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 33</value>
   </data>
-  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSettingsSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 23</value>
   </data>
-  <data name="button6.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSettingsSave.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button6.Text" xml:space="preserve">
+  <data name="btnSettingsSave.Text" xml:space="preserve">
     <value>Save settings as</value>
   </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
+  <data name="&gt;&gt;btnSettingsSave.Name" xml:space="preserve">
+    <value>btnSettingsSave</value>
   </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingsSave.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingsSave.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingsSave.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSettingLoad.Location" type="System.Drawing.Point, System.Drawing">
     <value>449, 33</value>
   </data>
-  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSettingLoad.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 23</value>
   </data>
-  <data name="button7.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSettingLoad.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button7.Text" xml:space="preserve">
+  <data name="btnSettingLoad.Text" xml:space="preserve">
     <value>Load settings</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
+  <data name="&gt;&gt;btnSettingLoad.Name" xml:space="preserve">
+    <value>btnSettingLoad</value>
   </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingLoad.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingLoad.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSettingLoad.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

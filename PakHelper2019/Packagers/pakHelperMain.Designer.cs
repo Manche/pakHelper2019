@@ -77,7 +77,6 @@
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Controls.Add(this.button4);
@@ -92,35 +91,37 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.groupBox1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.Wheat;
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            resources.ApplyResources(this.button3, "button3");
             this.button3.BackColor = System.Drawing.Color.Wheat;
+            resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button3_MouseClick);
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.Wheat;
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.Wheat;
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -163,11 +164,11 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -200,30 +201,30 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             // 
             // tabPage3
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             // 
             // tabPage4
             // 
-            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             // 
             // tabPage5
             // 
-            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Name = "tabPage5";
             // 
             // openFileDialog1
@@ -236,10 +237,6 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // folderBrowserDialog1
-            // 
-            resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             // 
             // button5
             // 

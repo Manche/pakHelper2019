@@ -50,8 +50,8 @@
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnSettingsSave = new System.Windows.Forms.Button();
+            this.btnSettingLoad = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
@@ -94,6 +94,7 @@
             resources.ApplyResources(this.radioButton2, "radioButton2");
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -102,6 +103,7 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -125,6 +127,7 @@
             resources.ApplyResources(this.radioButton4, "radioButton4");
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox2
             // 
@@ -138,6 +141,7 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.TabStop = true;
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -161,6 +165,7 @@
             resources.ApplyResources(this.radioButton6, "radioButton6");
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton5
             // 
@@ -169,6 +174,7 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.TabStop = true;
             this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox3
             // 
@@ -197,6 +203,7 @@
             resources.ApplyResources(this.radioButton8, "radioButton8");
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton7
             // 
@@ -205,25 +212,26 @@
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.TabStop = true;
             this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox4
             // 
             resources.ApplyResources(this.textBox4, "textBox4");
             this.textBox4.Name = "textBox4";
             // 
-            // button6
+            // btnSettingsSave
             // 
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
+            resources.ApplyResources(this.btnSettingsSave, "btnSettingsSave");
+            this.btnSettingsSave.Name = "btnSettingsSave";
+            this.btnSettingsSave.UseVisualStyleBackColor = true;
+            this.btnSettingsSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
             // 
-            // button7
+            // btnSettingLoad
             // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button7_MouseClick);
+            resources.ApplyResources(this.btnSettingLoad, "btnSettingLoad");
+            this.btnSettingLoad.Name = "btnSettingLoad";
+            this.btnSettingLoad.UseVisualStyleBackColor = true;
+            this.btnSettingLoad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.bunSettingLoad_MouseClick);
             // 
             // openFileDialog1
             // 
@@ -241,8 +249,8 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnSettingLoad);
+            this.Controls.Add(this.btnSettingsSave);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -254,6 +262,7 @@
             this.Name = "pakHelperOptions";
             this.Resizable = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.pakHelperOptions_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.pakHelperOptions_FormClosed);
             this.Load += new System.EventHandler(this.pakHelperOptions_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -290,8 +299,8 @@
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnSettingsSave;
+        private System.Windows.Forms.Button btnSettingLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }

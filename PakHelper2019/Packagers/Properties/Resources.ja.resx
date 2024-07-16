@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="makeobjpath_default" xml:space="preserve">
-    <value>Use default makeobj path (path of this application).</value>
+    <value>makeobjのパス設定が見つかりませんでした。pakHelperと同じディレクトリを自動指定します。</value>
   </data>
 </root>
